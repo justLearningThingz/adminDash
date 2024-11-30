@@ -13,7 +13,25 @@ ul{
     display:grid;
     height:100vh;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
+}
+
+.header{
+    background-color: burlywood;
+    grid-column: 2/6;
+    display:grid;
+    grid-template-rows: 1fr 2fr;
+}
+.header-top{
+    display:grid;
+    grid-template-columns: 4fr 2fr;
+}
+.header-bottom{
+display:grid;
+grid-template-columns: 1fr 5fr 1fr 1fr 1fr  ;
+}
+.notifications{
+display:grid;
 }
 
 .sidebar-left{
