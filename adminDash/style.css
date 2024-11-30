@@ -12,7 +12,8 @@ ul{
 .main-container{
     display:grid;
     height:100vh;
-    grid: 1fr, 5fr;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
 }
 
 .header{
