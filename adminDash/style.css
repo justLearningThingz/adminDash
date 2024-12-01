@@ -16,10 +16,12 @@ ul{
     grid-template-rows: 1fr;
 }
 
+/* sidebar left */
 .sidebar-left{
     background-color: aqua;
     padding:16px;
     grid-row: 1/9;
+    grid-column: 1;
     color: azure;
 
     display:grid;
@@ -56,19 +58,23 @@ ul{
 }
 
 /* Second Main Container */
-.second-main-container{
+.content-container{
     display:grid;
     grid-column: 2/3;
     grid-template-rows: 1fr 6fr ;
+    grid-template-columns: 6fr 1fr;
     height:100%;
     /* background-color: black; */
 }
+
+/* header */
 
 .header{
     background-color: burlywood;
     display:grid;
     grid-template-rows: 1fr 1fr;
-    grid-column: 1/-1;
+    grid-column: 1/3;
+    grid-row: 1;
 }
 .header-top{
     display:grid;
@@ -83,18 +89,13 @@ display:grid;
 }
 
 /* Content Div */
-.content-div{
+.project-section{
     display:grid;
     grid-row: 2/3;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: 1fr 8fr;
+    grid-template-rows: 1fr 6fr;
     height:100%;
 }
-.sidebar-right{
-    background-color: aquamarine;
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
+
 
 li{
     display:flex;
@@ -140,6 +141,12 @@ li{
     background-color: beige;
     border-radius: 16px;
     border-left: 10px solid orangered;
+}
+
+.sidebar-right{
+    background-color: aquamarine;
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
 .announcements-title{
