@@ -1,7 +1,8 @@
 *{
     padding:0;
     margin:0;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
 }
 
 ul{
@@ -88,11 +89,18 @@ grid-template-columns: 1fr 5fr 1fr 1fr 1fr  ;
 display:grid;
 }
 
+
+/* Third main container */
+.content-after-header{
+    display: grid;
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+
 /* Content Div */
 .project-section{
     display:grid;
-    grid-row: 2/3;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr 14fr;
     height:100%;
 }
 
@@ -120,9 +128,10 @@ li{
 
     font-size: 32px;
     font-weight: 700;
+    padding: 16px;
 
     display:grid;
-    align-items: center;
+    align-items: flex-end;
 
 }
 .project-card-grid{
@@ -131,7 +140,8 @@ li{
     grid-row: 2/3;
     gap:16px;
     display:grid;
-    grid:1fr 1fr 1fr/ 1fr 1fr;
+    width:100%;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     padding:16px 16px 3rem 16px;
 
 }
@@ -141,19 +151,43 @@ li{
     background-color: beige;
     border-radius: 16px;
     border-left: 10px solid orangered;
+    height:100px
 }
 
+
+/* sidebar right */
 .sidebar-right{
+    display:grid;
     background-color: aquamarine;
     grid-column: 2/3;
     grid-row: 2/3;
+    grid-template-rows:1fr 15fr ;
 }
 
 .announcements-title{
-    grid-column: 2/3;
-    grid-row: 1/3;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    grid-row: 1/2;
     background-color: rgb(206, 128, 202);
+    padding:16px
 }
-.announcements{
-    
+.sidebar-right-content{
+    grid-row: 2/3;
+    display:grid;
+    grid-template-rows: 3fr 1fr 3fr;
+    padding:16px
+}
+.announcements-div{
+    background-color: antiquewhite;
+    padding:8px;
+    border-radius: 6px;
+    display:flex;
+    flex-direction: column;    
+}
+.announcement{
+    border-bottom: 4px solid black;
+}
+.bottom{
+    border:none;
 }
